@@ -9,7 +9,7 @@ The R programming language is an invaluable tool for data science. This
 course equips you with the fundamental tools for data analysis in R and
 RStudio.
 
-📆 December 1, 2020 <br> 🕐 From 9.30 am to 12.30 pm <br> 📌 online
+📆 December 1, 2020 <br> 🕘 From 9.30 am to 12.30 pm <br> 📌 online
 
 Course materials will be posted in the days before the workshop.
 
@@ -78,6 +78,20 @@ need:
 
 Please run the following script in your R session to install the
 required packages
+
+``` r
+packages <- c("tidyverse", "here", "rstudioapi", "MASS", "actuar", "lubridate", "readr", "readxl", "haven")
+
+new_packages <- packages[!(packages %in% installed.packages()[,"Package"])]
+if(length(new_packages)) install.packages(new_packages)
+
+if(sum(!(packages %in% installed.packages()[, "Package"]))) {
+  stop(paste('The following required packages are not installed:\n', 
+             paste(packages[which(!(packages %in% installed.packages()[, "Package"]))], collapse = ', ')));
+} else {
+  message("Everything is set up correctly. You are ready to go.")
+}
+```
 
 These instructions can also be downloaded as .R script from the
 `scripts` folder. Open this script in RStudio (via File \> Open file),
