@@ -9,7 +9,7 @@ The R programming language is an invaluable tool for data science. This
 course equips you with the fundamental tools for data analysis in R and
 RStudio.
 
-📆 December 1, 2020 <br> 🕘 From 9.30 am to 12.30 pm <br> 📌 online
+📆 December 1, 2020 <br> 🕠 From 9.30 am to 12.30 pm <br> 📌 online
 
 Course materials will be posted in the days before the workshop.
 
@@ -76,6 +76,9 @@ need:
   - RStudio
     (<https://www.rstudio.com/products/rstudio/download/#download>)
 
+In the `prework` folder you will find a step-by-step guide to installing
+R and RStudio (though a bit outdated).
+
 Please run the following script in your R session to install the
 required packages
 
@@ -95,7 +98,7 @@ if(sum(!(packages %in% installed.packages()[, "Package"]))) {
 
 These instructions can also be downloaded as .R script from the
 `scripts` folder. Open this script in RStudio (via File \> Open file),
-select the code and press the Run button right in the script window.
+select the code and press the Run button top right in the script window.
 
 ## Instructors
 

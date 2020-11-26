@@ -99,6 +99,8 @@ need:
   - RStudio
     (<https://www.rstudio.com/products/rstudio/download/#download>)
 
+In the `prework` folder you will find a step-by-step guide to installing R and RStudio (though a bit outdated). 
+
 Please run the following script in your R session to install the
 required packages
 
