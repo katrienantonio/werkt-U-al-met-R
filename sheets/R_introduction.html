@@ -1,0 +1,2956 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Werkt U al met R?</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Katrien Antonio &amp; Roel Henckaerts" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/metropolis.css" type="text/css" />
+    <link rel="stylesheet" href="css/metropolis-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="css/my-css.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Werkt U al met R?
+## Hands-on webinar
+<html>
+<div style="float:left">
+
+</div>
+<hr align='center' color='#116E8A' size=1px width=97%>
+</html>
+### Katrien Antonio &amp; Roel Henckaerts
+### <a href="https://github.com/katrienantonio/werkt-U-al-met-R">Introductie tot R workshop</a> | December 1, 2020
+
+---
+
+
+
+
+
+
+class: inverse, center, middle
+name: prologue
+
+# Prologue
+
+&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#FAFAFA' size=1px width=796px&gt;&lt;/html&gt;
+
+---
+
+name: introduction
+
+# Introduction
+
+### Course
+
+&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#116E8A;" viewBox="0 0 496 512"&gt;&lt;path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/&gt;&lt;/svg&gt; https://github.com/katrienantonio/werkt-U-al-met-R
+
+The course repo on GitHub, where you can find the data sets, lecture sheets, R scripts and R markdown files.
+
+--
+
+### Us
+
+&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#116E8A;" viewBox="0 0 512 512"&gt;&lt;path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/&gt;&lt;/svg&gt; [https://katrienantonio.github.io/](https://katrienantonio.github.io/) &amp; [https://henckr.github.io/](https://henckr.github.io/)
+
+&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#116E8A;" viewBox="0 0 512 512"&gt;&lt;path d="M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"/&gt;&lt;/svg&gt; [katrien.antonio@kuleuven.be](mailto:katrien.antonio@kuleuven.be) &amp; [roel.henckaerts@kuleuven.be](mailto:roel.henckaerts@kuleuven.be)
+
+&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#116E8A;" viewBox="0 0 640 512"&gt;&lt;path d="M622.34 153.2L343.4 67.5c-15.2-4.67-31.6-4.67-46.79 0L17.66 153.2c-23.54 7.23-23.54 38.36 0 45.59l48.63 14.94c-10.67 13.19-17.23 29.28-17.88 46.9C38.78 266.15 32 276.11 32 288c0 10.78 5.68 19.85 13.86 25.65L20.33 428.53C18.11 438.52 25.71 448 35.94 448h56.11c10.24 0 17.84-9.48 15.62-19.47L82.14 313.65C90.32 307.85 96 298.78 96 288c0-11.57-6.47-21.25-15.66-26.87.76-15.02 8.44-28.3 20.69-36.72L296.6 284.5c9.06 2.78 26.44 6.25 46.79 0l278.95-85.7c23.55-7.24 23.55-38.36 0-45.6zM352.79 315.09c-28.53 8.76-52.84 3.92-65.59 0l-145.02-44.55L128 384c0 35.35 85.96 64 192 64s192-28.65 192-64l-14.18-113.47-145.03 44.56z"/&gt;&lt;/svg&gt; (Katrien) Professor in insurance data science
+
+&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#116E8A;" viewBox="0 0 640 512"&gt;&lt;path d="M622.34 153.2L343.4 67.5c-15.2-4.67-31.6-4.67-46.79 0L17.66 153.2c-23.54 7.23-23.54 38.36 0 45.59l48.63 14.94c-10.67 13.19-17.23 29.28-17.88 46.9C38.78 266.15 32 276.11 32 288c0 10.78 5.68 19.85 13.86 25.65L20.33 428.53C18.11 438.52 25.71 448 35.94 448h56.11c10.24 0 17.84-9.48 15.62-19.47L82.14 313.65C90.32 307.85 96 298.78 96 288c0-11.57-6.47-21.25-15.66-26.87.76-15.02 8.44-28.3 20.69-36.72L296.6 284.5c9.06 2.78 26.44 6.25 46.79 0l278.95-85.7c23.55-7.24 23.55-38.36 0-45.6zM352.79 315.09c-28.53 8.76-52.84 3.92-65.59 0l-145.02-44.55L128 384c0 35.35 85.96 64 192 64s192-28.65 192-64l-14.18-113.47-145.03 44.56z"/&gt;&lt;/svg&gt; (Roel) PhD student in insurance data science
+
+---
+
+name: checklist
+
+# Checklist
+
+☑ Do you have a fairly recent version of R?
+  
+  ```r
+  version$version.string
+  ## [1] "R version 4.0.3 (2020-10-10)"
+  ```
+
+☑ Do you have a fairly recent version of RStudio? 
+  
+  ```r
+  RStudio.Version()$version
+  ## Requires an interactive session but should return something like "[1] ‘1.3.1093’"
+  ```
+
+☑ Have you installed the R packages listed in the software requirements? 
+
+or
+
+☑ Have you created an account on RStudio Cloud (to avoid any local installation issues)?
+  
+---
+
+name: why-this-course # inspired by Grant McDermott intro lecture
+
+# Why this session?
+
+### The goals of this session .font140[&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#116E8A;" viewBox="0 0 512 512"&gt;&lt;path d="M505.05 19.1a15.89 15.89 0 0 0-12.2-12.2C460.65 0 435.46 0 410.36 0c-103.2 0-165.1 55.2-211.29 128H94.87A48 48 0 0 0 52 154.49l-49.42 98.8A24 24 0 0 0 24.07 288h103.77l-22.47 22.47a32 32 0 0 0 0 45.25l50.9 50.91a32 32 0 0 0 45.26 0L224 384.16V488a24 24 0 0 0 34.7 21.49l98.7-49.39a47.91 47.91 0 0 0 26.5-42.9V312.79c72.59-46.3 128-108.4 128-211.09.1-25.2.1-50.4-6.85-82.6zM384 168a40 40 0 1 1 40-40 40 40 0 0 1-40 40z"/&gt;&lt;/svg&gt;]
+
+--
+
+* explore the .KULbginline[R] universe
+
+--
+
+* discover different .KULbginline[data] and .KULbginline[object] types and syntax
+
+--
+
+* work with .KULbginline[data]: import, visualization, wrangling 
+
+--
+
+* write your own .KULbginline[functions]
+
+--
+
+* learn by doing, get you started (in particular when you have limited experience in R). 
+
+--
+
+&lt;br&gt;
+
+&gt; *"In short, we will cover things that we wish someone had taught us in our undergraduate programs."* 
+&gt; &lt;br&gt;
+&gt; .font80[This quote is from the [Data science for economists course](http://github.com/uo-ec607/lectures) by Grant McDermott.]
+
+---
+
+# What is R?
+
+&gt; &lt;font size="+2"&gt; &lt;p align="justify"&gt;The R environment is an integrated suite of software facilities for data manipulation, calculation and graphical display.&lt;/p&gt;&lt;/font&gt;
+
+--
+
+&lt;/br&gt;
+
+A brief history:
+
+- R is a dialect of the S language. 
+
+--
+
+- R was written by .KULbginline[R]obert Gentleman and .KULbginline[R]oss Ihaka in 1992. 
+
+--
+
+- The R source code was first released in 1995.
+
+--
+
+- In 1998, the Comprehensive R Archive Network [CRAN](http://CRAN.R-project.org/) was established.
+
+--
+
+- The first official release, R version 1.0.0, dates to 2000-02-29. Currently R 4.0.3 (October, 2020).
+
+--
+
+- R is open source via the [GNU General Public License](https://en.wikipedia.org/wiki/GNU_General_Public_License).
+
+
+---
+
+# Explore the R architecture
+
+- R is like a car's engine
+
+- RStudio is like a car's dashboard, an integrated development environment (IDE) for R.
+
+
+R: Engine            |  RStudio: Dashboard
+:-------------------------:|:-------------------------:
+&lt;img src="img/engine.jpg" alt="Drawing" style="height: 300px;"/&gt;  |  &lt;img src="img/dashboard.jpg" alt="Drawing" style="height: 300px;"/&gt;
+
+---
+
+# How do I code in R?
+
+Keep in mind:
+
+- unlike other software like Excel, STATA, or SAS, R is an interpreted language
+
+- no point and click in R!
+
+- .KULbginline[you have to program in R]!
+
+R .KULbginline[packages] extend the functionality of R by providing additional functions, and can be downloaded for free from the internet.
+
+R: A new phone           |  R Packages: Apps you can download
+:-------------------------:|:-------------------------:
+&lt;img src="img/iphone.jpg" alt="Drawing" style="height: 150px;"/&gt;  |  &lt;img src="img/apps.jpg" alt="Drawing" style="height: 150px;"/&gt;
+
+---
+
+# How to install and load an R package?
+
+.pull-left[
+
+Install the {ggplot2} package for data visualisation
+
+
+```r
+install.packages("ggplot2")
+```
+
+Load the installed package
+
+
+```r
+library(ggplot2)
+```
+
+And give it a try
+
+
+```r
+head(diamonds)
+ggplot(diamonds, aes(clarity, fill = cut)) + 
+  geom_bar() + theme_bw()
+```
+
+Packages are developed and maintained by R users worldwide. 
+
+They are shared with the R community through CRAN: now 16,744 packages online (on November 30, 2020)!
+
+]
+
+
+.pull-right[
+
+&lt;img src="R_introduction_files/figure-html/try_ggplot_plot-1.svg" width="80%" style="display: block; margin: auto;" /&gt;
+
+
+
+]
+
+---
+
+
+# Workflow of a data scientist
+
+Here is a model of the .hi-pink[tools needed in a typical data science project]: 
+
+&gt; &lt;p align="justify"&gt; Together, tidying and transforming are called &lt;b&gt;wrangling&lt;/b&gt;, because getting your data in a form that’s natural to work with often feels like a fight! &lt;/p&gt;
+
+&gt; &lt;p align="justify"&gt; Models are complementary tools to visualisation. Once you have made your questions sufficiently precise, you can use a model to answer them. Models are a fundamentally &lt;b&gt;mathematical or computational tool&lt;/b&gt;, so they generally scale well. But every model makes &lt;b&gt;assumptions&lt;/b&gt;, and by its very nature a model cannot question its own assumptions. That means &lt;b&gt;a model cannot fundamentally surprise you&lt;/b&gt;.&lt;/p&gt;
+
+&lt;center&gt;
+&lt;img src="img/data_science_pipeline.png" width="600"/&gt;
+&lt;/center&gt;
+
+.footnote[Figure and quote taken from Chapter 1 in [R for data science](https://r4ds.had.co.nz/).]
+
+---
+
+# Welcome to the tidyverse!
+
+&gt;&lt;p align="justify"&gt;The .KULbginline[tidyverse] is an opinionated collection of R packages designed for data science. All packages share an underlying design philosophy, grammar, and data structures. &lt;/p&gt;
+
+&lt;center&gt;
+&lt;img src="img/tidyverse_wide.png" width="750"/&gt;
+&lt;/center&gt;
+
+More on: [tidyverse](https://www.tidyverse.org).
+
+Install the packages with `install.packages("tidyverse")`. Then run `library(tidyverse)` to load the core tidyverse.
+
+---
+
+# Today's Outline
+
+.pull-left[
+* [Prologue](#prologue)
+
+* [R syntax, object and data types](#object)
+
+  - little arithmetics
+  - variables and data types
+  - basic data structures
+  
+* [Working with data in R](#data)
+
+  - data paths and read.table
+  - import data with {readr}, {readxl} and {haven}
+  - exploratory data analysis
+  - data wrangling in the tidyverse
+  - the pipe operator `%&gt;%`
+  - tidy manipulation with {dplyr}
+  
+]
+
+.pull-right[
+
+* [More on data visualization in R](#dataviz)
+
+  - advanced plots with {ggplot2}
+
+* [Conditionals and control flow](#cond)
+
+  - relational and logical operators
+  - conditionals and loops
+  
+* [Writing functions](#func)
+
+]
+
+
+
+---
+
+
+class: inverse, center, middle
+name: object
+
+# R syntax, object and data types
+
+---
+
+# R style guide
+
+Deciding on a .KULbginline[programming style] provides consistency to your code and assists in reading and writing code. 
+
+The choice of style guide is unimportant, but it is important to choose a style! 
+
+This workshop follows a set of rules roughly based on the [tidyverse style guide](https://style.tidyverse.org/).
+
+---
+
+# R style guide (cont.)
+
+.KULbginline[Variable names] contain only .KULbginline[lower case] letters. If the name consists of multiple words, then these words are separated by .KULbginline[underscores]. 
+
+
+```r
+number_of_simulations &lt;- 100
+```
+
+--
+
+.KULbginline[User defined functions] follow the same convention as variable names, but start with a .KULbginline[capital] letter.
+
+```r
+Multiply_by_2 &lt;- function(x) {
+  return(x * 2)
+} 
+```
+
+--
+
+Functions from external packages usually start with a lowercase letter.
+
+```r
+zero_list &lt;- rep(0, 100)
+```
+ 
+---
+
+# R as a calculator
+
+Do little arithmetics with R:
+
+- write R code in the console
+
+- every line of code is interpreted and executed by R 
+
+- you get a message whether or not your code was correct
+
+- the output of your R code is then shown in the console
+
+- use # sign to add comments, like Twitter!
+
+--
+
+Now run in the console
+
+
+```r
+10^2 + 36
+[1] 136
+```
+You asked and R answered!
+
+---
+
+# Variables
+
+A basic concept in (statistical) programming is a .KULbginline[variable]. 
+
+- a variable allows you to store a value (e.g. 4) or an object (e.g. a function description) in R
+
+- use this variable’s name to easily access the value or the object that is stored within this variable.
+
+--
+
+Assign value `4` to variable `a`
+
+```r
+a &lt;- 4
+```
+and verify the variable stored
+
+```r
+a
+[1] 4
+```
+
+
+---
+
+name: yourturn
+class: clear
+
+.left-column[
+
+&lt;!-- Add icon library --&gt;
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"&gt;
+
+## &lt;i class="fa fa-edit"&gt;&lt;/i&gt; &lt;br&gt; Your turn
+
+
+]
+
+.right-column[
+
+Verify the following instructions:
+
+
+```r
+a*5
+(a+10)/2
+a &lt;- a+1
+print(a)
+```
+]
+
+---
+
+# Data types
+
+R works with numerous .KULbginline[data types]: e.g.
+
+- decimal values like 4.5 are called .KULbginline[numerics]
+
+- natural numbers like 4 are called .KULbginline[integers]
+
+- Boolean values (`TRUE` or `FALSE`) are called .KULbginline[logical]
+
+- `Date` or `POSIXct` for time based variables&lt;sup&gt;[1]&lt;/sup&gt;; `Date` stores just a date and `POSIXct` stores a date and time 
+
+- text (or string) values are called .KULbginline[characters].
+
+.footnote[
+[1] Both objects are actually represented as the number of days (`Date`) or seconds (`POSIXct`) since January 1, 1970.
+]
+
+
+---
+
+name: yourturn
+class: clear
+
+.left-column[
+
+&lt;!-- Add icon library --&gt;
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"&gt;
+
+## &lt;i class="fa fa-edit"&gt;&lt;/i&gt; &lt;br&gt; Your turn
+
+
+]
+
+.right-column[
+
+Run the following instructions and pay attention to the code:
+
+
+```r
+my_numeric &lt;- 42.5
+
+my_character &lt;- "some text"
+
+my_logical &lt;- TRUE
+
+my_date &lt;- as.Date("06/17/2019", "%m/%d/%Y")
+```
+
+Verify the data type of a variable with the `class()` function: e.g.
+
+
+```r
+class(my_numeric)
+[1] "numeric"
+class(my_date)
+[1] "Date"
+```
+]
+
+---
+
+# Everything is an object
+
+&gt;&lt;p align="justify"&gt; The fundamental design principle underlying R is “everything is an object”. &lt;/p&gt; 
+
+&lt;br&gt;
+
+Keep in mind:
+
+- in R, an analysis is broken down into a series of steps
+
+- intermediate results are stored in objects, with minimal output at each step (often none) 
+
+- manipulate the objects to obtain the information required
+
+- a variable in R can take on any available data type, or hold any R object.
+
+---
+
+name: yourturn
+class: clear
+
+.left-column[
+
+&lt;!-- Add icon library --&gt;
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"&gt;
+
+## &lt;i class="fa fa-edit"&gt;&lt;/i&gt; &lt;br&gt; Your turn
+
+
+]
+
+.right-column[
+
+Run
+
+```r
+ls()
+```
+to list all objects stored in R's memory.
+
+Use `rm()` to remove an object from R's memory, e.g.
+
+
+```r
+rm(a)                                     # remove a single object
+ls()                                      # verify that object a is removed
+rm(my_character, my_logical)              # remove multiple objects
+ls()                                      # which object are we left with?
+rm(list = c('my_date', 'my_numeric'))     # remove a list of objects
+rm(list = ls())                           # remove all objects
+```
+]
+
+---
+
+# Vectors
+
+A .KULbginline[vector] is a simple tool to store data:
+
+- one-dimension arrays that can hold numeric data, character data, or logical data
+
+- you create a vector with the combine function `c()`
+
+- operations are applied to each element of the vector automatically, there is no need to loop through the vector.
+
+--
+
+Here are some first examples:
+
+
+```r
+my_vector &lt;- c(0, 3:5, 20, 0)                      
+my_vector[2]       # inspect entry 2 from vector my_vector
+## [1] 3
+my_vector[2:3]     # inspect entries 2 and 3
+## [1] 3 4
+length(my_vector)  # get vector length
+## [1] 6
+my_family &lt;- c("Katrien", "Jan", "Leen")
+my_family
+## [1] "Katrien" "Jan"     "Leen"
+```
+
+---
+
+name: yourturn
+class: clear
+
+.left-column[
+
+&lt;!-- Add icon library --&gt;
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"&gt;
+
+## &lt;i class="fa fa-edit"&gt;&lt;/i&gt; &lt;br&gt; Your turn
+
+
+]
+
+.right-column[
+
+You can give a name to the elements of a vector with the `names()` function:
+
+
+```r
+my_vector &lt;- c("Katrien Antonio", "teacher")
+names(my_vector) &lt;- c("Name", "Profession")
+my_vector
+             Name        Profession 
+"Katrien Antonio"         "teacher" 
+```
+
+Now it's your turn!
+
+Inspect `my_vector` using: 
+
+- the `attributes()` function
+
+- the `length()` function
+
+- the `str()` function
+]
+
+---
+
+name: yourturn
+class: clear
+
+.left-column[
+
+&lt;!-- Add icon library --&gt;
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"&gt;
+
+## &lt;i class="fa fa-edit"&gt;&lt;/i&gt; &lt;br&gt; Your turn
+
+
+]
+
+.right-column[
+
+You can give a name to the elements of a vector with the `names()` function:
+
+
+```r
+my_vector &lt;- c("Katrien Antonio", "teacher")
+names(my_vector) &lt;- c("Name", "Profession")
+my_vector
+             Name        Profession 
+"Katrien Antonio"         "teacher" 
+```
+
+
+
+```r
+attributes(my_vector)
+$names
+[1] "Name"       "Profession"
+
+length(my_vector)
+[1] 2
+
+str(my_vector)
+ Named chr [1:2] "Katrien Antonio" "teacher"
+ - attr(*, "names")= chr [1:2] "Name" "Profession"
+```
+]
+
+---
+
+# Matrices
+
+A .KULbginline[matrix] is:
+
+- a collection of elements of the same data type (numeric, character, or logical) 
+
+- fixed number of rows and columns.
+
+--
+
+A first example
+
+
+```r
+my_matrix &lt;- matrix(1:12, 3, 4, byrow = TRUE)
+my_matrix
+     [,1] [,2] [,3] [,4]
+[1,]    1    2    3    4
+[2,]    5    6    7    8
+[3,]    9   10   11   12
+my_matrix[1, 1]
+[1] 1
+```
+
+---
+
+# Data frames and tibbles
+
+A .KULbginline[data frame]:
+
+- is pretty much the *de facto* data structure for most tabular data 
+
+- what we use for statistics
+
+- variables of a data set as columns and the observations as rows.
+
+--
+
+A .KULbginline[tibble]:
+
+- a.k.a `tbl` 
+
+- a type of data frame common in the `tidyverse`
+
+- slightly different default behaviour than data frames.
+
+&lt;/br&gt; 
+
+Let's explore some differences between both structures!
+
+---
+
+name: yourturn
+class: clear
+
+.left-column[
+
+&lt;!-- Add icon library --&gt;
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"&gt;
+
+## &lt;i class="fa fa-edit"&gt;&lt;/i&gt; &lt;br&gt; Your turn
+
+
+]
+
+.right-column[
+
+Inspect a built-in data frame
+
+
+```r
+mtcars
+str(mtcars)
+head(mtcars)
+```
+
+Extract a variable from a data frame and ask a `summary`
+
+
+```r
+summary(mtcars$cyl)   # use $ to extract variable from a data frame
+```
+
+Now inspect a tibble
+
+
+```r
+diamonds
+str(diamonds)  # built-in in library ggplot2
+head(diamonds)
+```
+
+Can you list some differences?
+]
+
+---
+
+# Lists
+
+A .KULbginline[list] allows you to 
+
+- gather a variety of objects under one name in an ordered way
+
+- these objects can be matrices, vectors, data frames, even other lists
+
+- a list is some kind of super data type
+
+- you can store practically any piece of information in it!
+
+--
+
+A first example of a list:
+
+
+```r
+my_list &lt;- list(one = 1, two = c(1, 2), five = seq(1, 4, length = 5), six = c("Katrien", "Jan"))
+names(my_list)
+[1] "one"  "two"  "five" "six" 
+str(my_list)
+List of 4
+ $ one : num 1
+ $ two : num [1:2] 1 2
+ $ five: num [1:5] 1 1.75 2.5 3.25 4
+ $ six : chr [1:2] "Katrien" "Jan"
+```
+
+---
+
+name: yourturn
+class: clear
+
+.left-column[
+
+&lt;!-- Add icon library --&gt;
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"&gt;
+
+## &lt;i class="fa fa-edit"&gt;&lt;/i&gt; &lt;br&gt; Your turn
+
+
+]
+
+.right-column[
+
+1. Create a vector `fav_music` with your favourite artists.
+
+2. Create a vector `num_records` with the number of records you have in your collection of each of those artists.
+
+3. Create a vector `num_concerts` with the number of times you attended a concert of these artists.
+
+4. Put everything together in a data frame, assign the name `my_music` to this data frame and change the labels of the information stored in the columns to `artist`, `records` and `concerts`.
+
+5. Extract the variable `num_records` from the data frame `my_music`. 
+
+6. Calculate the total number of records in your collection (for the defined set of artists).
+
+7. Check the structure of the data frame, ask for a `summary`.
+]
+
+---
+
+class: clear
+
+.pull-left[
+
+My solution for .hi-pink[Q. 1-4]:
+
+
+```r
+fav_music &lt;- c("Prince", "REM", "Ryan Adams", "BLOF")
+num_records &lt;- c(2, 7, 5, 1)
+num_concerts &lt;- c(0, 3, 1, 0)
+my_music &lt;- data.frame(artist = fav_music,
+                       records = num_records,
+                       concerts = num_concerts)
+```
+
+
+]
+
+.pull-right[
+
+My solution for .hi-pink[Q. 5-7]:
+
+```r
+my_music$records
+## [1] 2 7 5 1
+sum(my_music$records)
+## [1] 15
+summary(my_music)
+##     artist             records        concerts  
+##  Length:4           Min.   :1.00   Min.   :0.0  
+##  Class :character   1st Qu.:1.75   1st Qu.:0.0  
+##  Mode  :character   Median :3.50   Median :0.5  
+##                     Mean   :3.75   Mean   :1.0  
+##                     3rd Qu.:5.50   3rd Qu.:1.5  
+##                     Max.   :7.00   Max.   :3.0
+```
+]
+
+---
+
+class: inverse, center, middle
+name: data
+
+# Working with data in R
+
+---
+
+# Path to your file
+
+Some useful instructions regarding path names:
+
+- get your working directory
+
+
+```r
+getwd()
+```
+
+--
+
+- specify a path name, with forward slash or double back slash, and set your working directory
+
+
+```r
+path &lt;- file.path("/Users/roelhenckaerts/Dropbox/Workshop AG")
+setwd(path)
+```
+
+--
+
+- use a relative path
+
+
+```r
+path_pc &lt;- file.path("./data/PC_data.txt") # single dot represents current directory
+```
+
+or 
+
+
+```r
+path_pc &lt;- file.path("../data/PC_data.txt") # double dot represents parent directory
+```
+
+---
+
+# Path to your file (cont.)
+
+Some useful instructions regarding path names:
+
+- extract the directory of the current active file in RStudio via the package `rstudioapi` 
+
+
+```r
+path &lt;- dirname(rstudioapi::getActiveDocumentContext()$path)
+setwd(path)
+```
+
+--
+
+- a more general approach to achieve the same via the package `here` 
+
+
+```r
+path &lt;- here::here()
+setwd(path)
+```
+
+--
+
+- these instructions are recommended because they avoid referring to a specific working directory on your computer
+
+- this allows you (and your colleagues) to get started right away. The only thing you need is an organized file structure.
+
+---
+
+# Import a .txt file
+
+`read.table()` is the most basic importing function with tons of different arguments, see `?read.table`
+
+--
+
+Let's give this a try:
+
+
+
+
+```r
+path_secura &lt;- file.path('../data/SecuraRe.txt')
+secura_re &lt;- read.table(path_secura, header = TRUE)
+str(secura_re)
+## 'data.frame':	371 obs. of  2 variables:
+##  $ Year: int  1990 1991 1991 1988 1993 1991 1993 1994 1994 1988 ...
+##  $ Loss: int  7898639 7487232 7389404 6924749 6685249 5625469 5549253 5342757 5127321 5100022 ...
+```
+
+---
+
+# Useful packages for data import
+
+
+.pull-left[
+&lt;center&gt;
+&lt;img src="img/readxl.png" width="200"&gt;
+&lt;/center&gt;
+]
+
+.pull-right[
+&lt;center&gt;
+&lt;img src="img/haven.png" width="200"&gt;
+&lt;/center&gt;
+]
+
+&lt;center&gt;
+&lt;img src="img/readr.png" width="200"&gt;
+&lt;/center&gt;
+
+---
+
+# The readr package
+
+The goal of `readr` is to provide a fast and friendly way to read rectangular data (like csv, tsv, and fwf).
+
+--
+
+Column specification via `col_types` describes how each column should be converted, but readr will guess it for you automatically.
+
+--
+
+`readr` supports seven file formats with seven `read_` functions:
+
+* `read_csv()`: comma separated (CSV) files
+
+* `read_tsv()`: tab separated files
+
+* `read_delim()`: general delimited files
+
+* `read_fwf()`: fixed width files
+
+* `read_table()`: tabular files where columns are separated by white-space
+
+* `read_log()`: web log files.
+
+More details on [https://readr.tidyverse.org/](https://readr.tidyverse.org/).
+
+
+---
+
+
+# The readxl package
+
+The `readxl` package makes it easy to get Excel data into R:
+
+- no external dependencies, so it’s easy to install and use 
+
+- designed to work with tabular data.
+
+
+```r
+path_urbanpop &lt;- file.path("../data/urbanpop.xlsx")
+readxl::excel_sheets(path_urbanpop) # list sheet names with `excel_sheets()`
+## [1] "1960-1966" "1967-1974" "1975-2011"
+```
+
+--
+
+Specify a worksheet by name or number, e.g.
+
+```r
+pop_1 &lt;- readxl::read_excel(path_urbanpop, sheet = 1) 
+pop_2 &lt;- readxl::read_excel(path_urbanpop, sheet = "1967-1974") 
+```
+
+and inspect
+
+```r
+names(pop_1)
+## [1] "country" "1960"    "1961"    "1962"    "1963"    "1964"    "1965"   
+## [8] "1966"
+names(pop_2)
+## [1] "country" "1967"    "1968"    "1969"    "1970"    "1971"    "1972"   
+## [8] "1973"    "1974"
+```
+
+---
+
+# The haven package
+
+The `haven` package enables R to read and write various data formats used by other statistical packages.
+
+It supports:
+
+- **SAS**: `read_sas()` reads .sas7bdat and .sas7bcat files and `read_xpt()` reads SAS transport files (version 5 and version 8).
+`write_sas()` writes .sas7bdat files.
+
+- **SPSS**: `read_sav()` reads .sav files and `read_por()` reads the older .por files. `write_sav()` writes .sav files.
+
+- **Stata**: `read_dta()` reads .dta files (up to version 15). 
+`write_dta()` writes .dta files (versions 8-15).
+
+---
+
+name: yourturn
+class: clear
+
+.left-column[
+
+&lt;!-- Add icon library --&gt;
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"&gt;
+
+## &lt;i class="fa fa-edit"&gt;&lt;/i&gt; &lt;br&gt; Your turn
+
+
+]
+
+.right-column[
+
+1. Read the file 'PC_data.txt' in the data folder with the `read.table` function.
+
+2. Experiment with function arguments of `read.table`, for example `header`, `nrows` and `skip`.
+
+]
+
+---
+
+class: clear
+
+
+An illustration:
+
+
+```r
+path_pc &lt;- file.path('../data/PC_data.txt')
+mtpl_base &lt;- read.table(path_pc, header = FALSE, nrow = 100, skip = 10)
+str(mtpl_base)
+## 'data.frame':	100 obs. of  18 variables:
+##  $ V1 : int  10 11 12 13 14 15 16 17 18 19 ...
+##  $ V2 : int  0 1 0 0 0 0 0 0 0 0 ...
+##  $ V3 : num  0 545 0 0 0 ...
+##  $ V4 : num  NA 545 NA NA NA ...
+##  $ V5 : num  1 1 0.981 1 0.973 ...
+##  $ V6 : chr  "PO" "FO" "TPL" "PO" ...
+##  $ V7 : chr  "gasoline" "diesel" "diesel" "gasoline" ...
+##  $ V8 : chr  "private" "private" "private" "private" ...
+##  $ V9 : chr  "N" "N" "N" "N" ...
+##  $ V10: chr  "male" "male" "male" "male" ...
+##  $ V11: int  34 39 55 77 49 63 43 51 67 52 ...
+##  $ V12: int  7 1 11 9 8 0 1 0 10 0 ...
+##  $ V13: int  6 2 6 6 19 7 2 7 6 16 ...
+##  $ V14: int  74 85 87 104 71 104 85 113 130 125 ...
+##  $ V15: int  1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 ...
+##  $ V16: chr  "BRUSSEL" "BRUSSEL" "BRUSSEL" "BRUSSEL" ...
+##  $ V17: num  4.36 4.36 4.36 4.36 4.36 ...
+##  $ V18: num  50.8 50.8 50.8 50.8 50.8 ...
+```
+
+---
+class: clear
+
+
+The following code illustrates the use of `col_types` in `readr::read_table` to specify column types:
+
+
+```r
+path_pc &lt;- file.path('../data/PC_data.txt')
+mtpl_tidy &lt;- readr::read_table2(path_pc, col_types = 'iidddfffffiiiiffdd')
+str(mtpl_tidy, give.attr = FALSE)
+## tibble [163,231 x 18] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+##  $ ID      : int [1:163231] 1 2 3 4 5 6 7 8 9 10 ...
+##  $ NCLAIMS : int [1:163231] 1 0 0 0 1 0 1 0 0 0 ...
+##  $ AMOUNT  : num [1:163231] 1618 0 0 0 156 ...
+##  $ AVG     : num [1:163231] 1618 NA NA NA 156 ...
+##  $ EXP     : num [1:163231] 1 1 1 1 0.0466 ...
+##  $ COVERAGE: Factor w/ 3 levels "TPL","PO","FO": 1 2 1 1 1 1 3 1 3 2 ...
+##  $ FUEL    : Factor w/ 2 levels "gasoline","diesel": 1 1 2 1 1 1 1 1 1 1 ...
+##  $ USE     : Factor w/ 2 levels "private","work": 1 1 1 1 1 1 1 1 1 1 ...
+##  $ FLEET   : Factor w/ 2 levels "N","Y": 1 1 1 1 1 1 1 1 1 1 ...
+##  $ SEX     : Factor w/ 2 levels "male","female": 1 2 1 1 2 1 1 2 1 1 ...
+##  $ AGEPH   : int [1:163231] 50 64 60 77 28 26 26 58 59 34 ...
+##  $ BM      : int [1:163231] 5 5 0 0 9 11 11 11 0 7 ...
+##  $ AGEC    : int [1:163231] 12 3 10 15 7 12 8 14 3 6 ...
+##  $ POWER   : int [1:163231] 77 66 70 57 70 70 55 47 98 74 ...
+##  $ PC      : Factor w/ 583 levels "1000","1030",..: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ TOWN    : Factor w/ 578 levels "BRUSSEL","SCHAARBE",..: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ LONG    : num [1:163231] 4.36 4.36 4.36 4.36 4.36 ...
+##  $ LAT     : num [1:163231] 50.8 50.8 50.8 50.8 50.8 ...
+```
+
+---
+
+# Explore a numeric variable
+
+.pull-left[
+Explore the .KULbginline[numeric] variable `AGEPH`:
+
+
+
+```r
+# get a summary
+summary(mtpl_tidy$AGEPH)
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##      18      35      46      47      58      95
+
+# check if variable is numeric
+is.numeric(mtpl_tidy$AGEPH) 
+## [1] TRUE
+
+# get mean
+mean(mtpl_tidy$AGEPH) 
+## [1] 46.99999
+
+# get variance
+var(mtpl_tidy$AGEPH)             
+## [1] 219.9695
+```
+]
+
+--
+
+.pull-right[
+Visualize the distribution:
+
+
+```r
+hist(mtpl_tidy$AGEPH, freq = FALSE,
+     nclass = 20, col = "light blue")
+lines(density(mtpl_tidy$AGEPH), col = "red")
+```
+
+&lt;img src="R_introduction_files/figure-html/eda_num2-1.svg" width="75%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Explore a factor variable
+
+.pull-left[
+
+Explore the .KULbginline[factor] variable `COVERAGE`:
+
+
+```r
+# check if variable is a factor
+is.factor(mtpl_tidy$COVERAGE) 
+## [1] TRUE
+
+# get observation counts
+table(mtpl_tidy$COVERAGE) 
+## 
+##   TPL    PO    FO 
+## 95136 45988 22107
+
+# get proportional observation counts
+prop.table(table(mtpl_tidy$COVERAGE))
+## 
+##       TPL        PO        FO 
+## 0.5828305 0.2817357 0.1354338
+```
+]
+
+--
+
+.pull-right[
+Visualize the distribution:
+
+
+```r
+barplot(table(mtpl_tidy$COVERAGE),
+        col = "light blue")
+```
+
+&lt;img src="R_introduction_files/figure-html/eda_fact2-1.svg" width="75%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Explore two factor variables
+
+.pull-left[
+
+Explore the two .KULbginline[factor] variables `SEX` and `FUEL`:
+
+
+```r
+table(mtpl_tidy$SEX, mtpl_tidy$FUEL)
+##         
+##          gasoline diesel
+##   male      79546  40510
+##   female    33287   9888
+
+prop.table(table(mtpl_tidy$SEX, mtpl_tidy$FUEL))
+##         
+##            gasoline     diesel
+##   male   0.48732165 0.24817590
+##   female 0.20392572 0.06057673
+
+prop.table(table(mtpl_tidy$SEX, mtpl_tidy$FUEL), 1)
+##         
+##           gasoline    diesel
+##   male   0.6625741 0.3374259
+##   female 0.7709786 0.2290214
+```
+
+Try `prop.table(table(mtpl_tidy$SEX, mtpl_tidy$FUEL), 2)`
+]
+
+--
+
+.pull-right[
+
+Visualize the distribution:
+
+
+```r
+plot(FUEL ~ SEX, data = mtpl_tidy)
+```
+
+&lt;img src="R_introduction_files/figure-html/eda_factfact2-1.svg" width="75%" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+# Explore a factor and a numeric variable
+
+.pull-left[
+
+Explore the .KULbginline[numeric] variable `POWER` and the .KULbginline[factor] `SEX`:
+
+
+
+```r
+tapply(mtpl_tidy$POWER, mtpl_tidy$USE, mean)
+##  private     work 
+## 55.48592 66.21830
+
+tapply(mtpl_tidy$POWER,
+       list(mtpl_tidy$USE, mtpl_tidy$FUEL), mean)
+##         gasoline   diesel
+## private 56.47123 53.20774
+## work    69.86773 61.63824
+```
+
+`tapply` does the following:
+- subsets `POWER` by `USE` (and `FUEL`)
+- applies the function `mean` to each subset
+]
+
+--
+
+.pull-right[
+
+
+Visualize the distribution:
+
+
+```r
+boxplot(POWER ~ USE, data = mtpl_tidy)
+```
+
+&lt;img src="R_introduction_files/figure-html/eda_numfact2-1.svg" width="75%" style="display: block; margin: auto;" /&gt;
+
+]
+
+
+---
+
+# Three directions for data wrangling
+
+Three lines of work are available:
+
+- the basic R instructions (e.g. using `subset`, `aggregate`)
+
+- the RStudio line offering the packages from the {tidyverse}, including the {dplyr} package
+
+- the {data.table} line developed by Matt Dowle, see e.g. DataCamp’s course on {data.table}.
+
+--
+
+The latter two:
+
+- offer advanced, and fast, data handling with large R objects and lots of flexibility 
+
+- have a very specific syntax, with a demanding learning curve.
+
+&lt;br/&gt; 
+
+This tutorial will mainly explore the {tidyverse} direction. 
+
+---
+
+
+# The basic split-apply-combine strategy
+
+We first cover some basic R instructions, before diving into the {tidyverse}. 
+
+Use the `diamonds` data set (from the `ggplot2` package) and subset
+
+
+```r
+subset(diamonds, cut == "Ideal") # rows
+diamonds[, c("carat", "cut", "color", "clarity")] # columns
+```
+--
+
+Calculate a new variable
+
+```r
+diamonds$price_per_carat &lt;- diamonds$price/diamonds$carat
+```
+--
+
+Calculate average `price` per each type of `cut`
+
+```r
+aggregate(price ~ cut, diamonds, mean)
+```
+or
+
+```r
+aggregate(price ~ cut + color, diamonds, mean)
+```
+
+
+---
+
+# Entering the tidyverse 
+
+The tidyverse is a collection of R packages sharing the same design philosphy.
+
+`require(tidyverse)` loads the 8 core packages:
+
+* ggplot2       
+* readr         
+* stringr
+* dplyr         
+* purrr         
+* forcats
+* tidyr         
+* tibble        
+
+`install.package(tidyverse)` installs many other packages, including:
+
+* lubridate 
+* readxl
+
+Today you will use &lt;span style="color:#e0144e;"&gt;5-6 packages&lt;/span&gt; from the tidyverse!
+
+---
+
+class: clear, center, middle
+
+background-image: url("img/tidyverse2.1.png")
+background-size: cover
+background-size: 65% 
+background-position: center
+
+---
+
+# A tibble instead of a data.frame
+
+.pull-left[
+Within the {tidyverse} tibbles are a modern take on data frames:
+
+- keep the features that have stood the test of time
+
+- drop the features that used to be convenient but are now frustrating. 
+
+You can use: 
+
+- `tibble()` to create a new tibble
+
+- `as_tibble()` transforms an object (e.g. a data frame) into a tibble.
+]
+
+--
+
+.pull-right[
+
+Inspect the differences:
+
+```r
+str(mtcars, list.len = 5)
+## 'data.frame':	32 obs. of  11 variables:
+##  $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
+##  $ cyl : num  6 6 4 6 8 6 8 4 4 6 ...
+##  $ disp: num  160 160 108 258 360 ...
+##  $ hp  : num  110 110 93 110 175 105 245 62 95 123 ...
+##  $ drat: num  3.9 3.9 3.85 3.08 3.15 2.76 3.21 3.69 3.92 3.92 ...
+##   [list output truncated]
+
+str(as_tibble(mtcars), list.len = 5)
+## tibble [32 × 11] (S3: tbl_df/tbl/data.frame)
+##  $ mpg : num [1:32] 21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
+##  $ cyl : num [1:32] 6 6 4 6 8 6 8 4 4 6 ...
+##  $ disp: num [1:32] 160 160 108 258 360 ...
+##  $ hp  : num [1:32] 110 110 93 110 175 105 245 62 95 123 ...
+##  $ drat: num [1:32] 3.9 3.9 3.85 3.08 3.15 2.76 3.21 3.69 3.92 3.92 ...
+##   [list output truncated]
+```
+]
+
+---
+
+# Pipes in R
+
+In R, the pipe operator is `%&gt;%`. 
+
+It takes the output of one statement and makes it the input of the next statement. 
+
+When describing it, you can think of it as a “THEN”.
+
+--
+
+A first example: 
+
+
+```r
+diamonds %&gt;% subset(cut == "Ideal")
+```
+
+is equivalent to:
+
+
+```r
+subset(diamonds, cut == "Ideal")
+```
+
+
+---
+
+# Data manipulation verbs
+
+The `dplyr` package holds many useful data manipulation verbs:
+
+- `mutate()` adds new variables that are functions of existing variables
+
+- `select()` picks variables based on their names
+
+- `filter()` picks cases based on their values
+
+- `summarise()` reduces multiple values down to a single summary
+
+- `arrange()` changes the ordering of the rows.
+
+--
+
+These all combine naturally with `group_by()` which allows you to perform any operation “by group”.
+
+--
+
+Use the `%&gt;%` for multistep operations. This passes result on left into first argument of function on right.
+
+---
+
+
+# filter()
+
+Extract rows that meet logical criteria.
+
+--
+
+Here you go:
+
+- inspect the `mtcars` data set
+
+- filter observations with `hp` larger than 200
+
+
+```r
+mtcars %&gt;% filter(hp &gt; 200)
+##                      mpg cyl disp  hp drat    wt  qsec vs am gear carb
+## Duster 360          14.3   8  360 245 3.21 3.570 15.84  0  0    3    4
+## Cadillac Fleetwood  10.4   8  472 205 2.93 5.250 17.98  0  0    3    4
+## Lincoln Continental 10.4   8  460 215 3.00 5.424 17.82  0  0    3    4
+## Chrysler Imperial   14.7   8  440 230 3.23 5.345 17.42  0  0    3    4
+## Camaro Z28          13.3   8  350 245 3.73 3.840 15.41  0  0    3    4
+## Ford Pantera L      15.8   8  351 264 4.22 3.170 14.50  0  1    5    4
+## Maserati Bora       15.0   8  301 335 3.54 3.570 14.60  0  1    5    8
+```
+
+---
+
+# filter() (cont.)
+
+Here is an overview of logical tests:
+
+&lt;center&gt;
+&lt;img src="img/logical_tests.png" width="600"/&gt;
+&lt;/center&gt;
+
+---
+
+# mutate()
+
+Create new columns.
+
+--
+
+Here you go:
+
+- inspect the `mtcars` data set
+
+- create a new variable `hp_per_wt`
+
+
+```r
+mtcars %&gt;% filter(hp &gt; 200) %&gt;% mutate(hp_per_wt = hp / wt)
+##    mpg cyl disp  hp drat    wt  qsec vs am gear carb hp_per_wt
+## 1 14.3   8  360 245 3.21 3.570 15.84  0  0    3    4  68.62745
+## 2 10.4   8  472 205 2.93 5.250 17.98  0  0    3    4  39.04762
+## 3 10.4   8  460 215 3.00 5.424 17.82  0  0    3    4  39.63864
+## 4 14.7   8  440 230 3.23 5.345 17.42  0  0    3    4  43.03087
+## 5 13.3   8  350 245 3.73 3.840 15.41  0  0    3    4  63.80208
+## 6 15.8   8  351 264 4.22 3.170 14.50  0  1    5    4  83.28076
+## 7 15.0   8  301 335 3.54 3.570 14.60  0  1    5    8  93.83754
+```
+
+---
+
+# summarise()
+
+Compute table of summaries.
+
+--
+
+Here you go: 
+
+- inspect the `mtcars` data set
+
+- calculate mean and standard deviation of `hp` and `wt`
+
+
+```r
+mtcars %&gt;% summarise(hp_mean = mean(hp),
+                     hp_sd = sd(hp),
+                     wt_mean = mean(wt),
+                     wt_sd = sd(wt))
+##    hp_mean    hp_sd wt_mean     wt_sd
+## 1 146.6875 68.56287 3.21725 0.9784574
+```
+
+--
+
+or in more compact notation with `across`:
+
+
+```r
+mtcars %&gt;% summarise(across(c(hp, wt),
+                            list(mean2 = mean, sd2 = sd)))
+##   hp_mean2   hp_sd2 wt_mean2    wt_sd2
+## 1 146.6875 68.56287  3.21725 0.9784574
+```
+
+---
+
+# group_by()
+
+Groups cases by common values of one or more columns.
+
+--
+
+Here you go: 
+
+- inspect the `mtcars` data set
+
+- calculate mean of `hp` and `disp` by levels of `cyl`
+
+
+```r
+mtcars %&gt;% group_by(cyl) %&gt;% summarise(hp_mean = mean(hp),
+                                       disp_mean = mean(disp))
+```
+
+```
+##   cyl   hp_mean disp_mean
+## 1   4  82.63636  105.1364
+## 2   6 122.28571  183.3143
+## 3   8 209.21429  353.1000
+```
+
+---
+
+name: yourturn
+class: clear
+
+.left-column[
+
+&lt;!-- Add icon library --&gt;
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"&gt;
+
+## &lt;i class="fa fa-edit"&gt;&lt;/i&gt; &lt;br&gt; Your turn
+
+
+]
+
+.right-column[
+
+Discover some insights on claim frequency and severity in the MTPL portfolio.
+
+Some options are listed below:
+
+1. Calculate the overall empirical claim frequency in the portfolio as `sum(NCLAIMS) / sum(EXP)`. Now do the same, but with separate values for each gender (`SEX`) and/or type of fuel (`FUEL`).
+
+2. Filter the observations with a claim and calculate the average claim severity as `weighted.mean(AVG, NCLAIMS)`. Do the same but for each type of coverage separately.
+
+]
+
+---
+
+class: clear
+
+
+.pull-left[
+
+My solution for .hi-pink[Q1]:
+
+
+```r
+mtpl_tidy %&gt;% 
+  summarise(freq = sum(NCLAIMS) / sum(EXP)) %&gt;% 
+  as.data.frame()
+##        freq
+## 1 0.1393352
+
+mtpl_tidy %&gt;% group_by(SEX) %&gt;% 
+  summarise(freq = sum(NCLAIMS) / sum(EXP)) %&gt;% 
+  as.data.frame()
+##      SEX      freq
+## 1   male 0.1361164
+## 2 female 0.1484325
+
+mtpl_tidy %&gt;% group_by(SEX, FUEL) %&gt;% 
+  summarise(freq = sum(NCLAIMS) / sum(EXP)) %&gt;% 
+  as.data.frame()
+##      SEX     FUEL      freq
+## 1   male gasoline 0.1268247
+## 2   male   diesel 0.1545461
+## 3 female gasoline 0.1417593
+## 4 female   diesel 0.1711736
+```
+]
+
+.pull-right[
+
+My solution for .hi-pink[Q2]:
+
+
+```r
+mtpl_tidy %&gt;% filter(NCLAIMS &gt; 0) %&gt;% 
+  summarise(sev = weighted.mean(AVG, NCLAIMS)) %&gt;% 
+  as.data.frame()
+##        sev
+## 1 1620.055
+
+mtpl_tidy %&gt;% filter(NCLAIMS &gt; 0) %&gt;% 
+  group_by(COVERAGE) %&gt;% 
+  summarise(sev = weighted.mean(AVG, NCLAIMS)) %&gt;% 
+  as.data.frame()
+##   COVERAGE      sev
+## 1      TPL 1722.811
+## 2       PO 1276.656
+## 3       FO 1833.615
+```
+]
+
+---
+
+class: inverse, center, middle
+name: dataviz
+
+# More on data visualization in R
+
+---
+
+# Basic plot instructions
+
+.pull-left[
+
+Create a .KULbginline[scatterplot] with the `plot()` function:
+
+
+```r
+plot(AGEPH ~ POWER, data = mtpl_tidy[1:1000, ],
+     pch = 12, col = "blue", xlim = c(10, 150),
+     main = 'Basic scatterplot')
+```
+
+&lt;img src="R_introduction_files/figure-html/base_plot-1.svg" width="75%" style="display: block; margin: auto;" /&gt;
+
+]
+
+--
+
+.pull-right[
+
+Draw a .KULbginline[function] over the interval [from, to] with `curve()`:
+
+
+```r
+curve(dnorm, from = -5, to = 5,
+      col = "red", lwd = 3, 
+      main = "Standard normal density distribution")
+```
+
+&lt;img src="R_introduction_files/figure-html/base_curve-1.svg" width="75%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Plots with ggplot2
+
+The aim of the {ggplot2} package is to create elegant data visualisations using the grammar of graphics. 
+
+--
+
+Here are the basic steps:
+
+- begin a plot with the function `ggplot()` creating a coordinate system that you can add layers to
+
+- the first argument of `ggplot()` is the dataset to use in the graph
+
+--
+
+Thus
+
+
+```r
+library(ggplot2)
+ggplot(data = mtpl_tidy)
+```
+
+creates an empty graph.
+
+---
+
+# Plots with ggplot2 (cont.)
+
+You complete your graph by adding one or more .KULbginline[layers] to `ggplot()`. 
+
+--
+
+For example: 
+
+- `geom_point()` adds a layer of points to your plot, which creates a scatterplot
+
+- `geom_smooth()` adds a smooth line
+
+- `geom_bar` a bar plot.
+
+--
+
+Each geom function in `ggplot2` takes a .KULbginline[mapping] argument: 
+
+- how variables in your dataset are mapped to visual properties
+
+- always paired with `aes()` and the `\(x\)` and `\(y\)` arguments of `aes()` specify which variables to map to the `\(x\)` and `\(y\)` axes.
+
+---
+
+# Scatterplot with ggplot2
+
+
+```r
+ggplot(data = mtpl_tidy[1:1000, ]) + geom_point(mapping = aes(x = POWER, y = AGEPH))
+```
+
+&lt;img src="R_introduction_files/figure-html/unnamed-chunk-44-1.svg" width="40%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+# Scatterplot with ggplot2 (cont.)
+
+.pull-left[
+
+Fixed color defined .KULbginline[outside] `aes()`:
+
+```r
+ggplot(data = mtpl_tidy[1:1000, ]) +
+geom_point(mapping = aes(x = POWER, y = AGEPH),
+           color = "blue")
+```
+
+&lt;img src="R_introduction_files/figure-html/unnamed-chunk-45-1.svg" width="75%" style="display: block; margin: auto;" /&gt;
+
+]
+
+--
+
+.pull-right[
+
+Color based on variable defined .KULbginline[inside] `aes()`:
+
+```r
+ggplot(data = mtpl_tidy[1:1000, ]) +
+geom_point(mapping = aes(x = POWER, y = AGEPH,
+                         color = SEX))
+```
+
+&lt;img src="R_introduction_files/figure-html/unnamed-chunk-46-1.svg" width="75%" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+# Multiple layers in one plot
+
+.pull-left[
+
+Mappings defined .KULbginline[locally] in the `geom_` elements:
+
+```r
+ggplot(data = mtpl_tidy[1:1000, ]) +
+  geom_point(mapping = aes(x = POWER, y = AGEPH)) +
+  geom_smooth(mapping = aes(x = POWER, y = AGEPH))
+```
+
+&lt;img src="R_introduction_files/figure-html/unnamed-chunk-47-1.svg" width="75%" style="display: block; margin: auto;" /&gt;
+
+]
+
+--
+
+.pull-right[
+
+Mapping defined .KULbginline[globally] in `ggplot()`:
+
+```r
+ggplot(data = mtpl_tidy[1:1000, ],
+       mapping = aes(x = POWER, y = AGEPH)) +
+geom_point() + geom_smooth()
+```
+
+&lt;img src="R_introduction_files/figure-html/unnamed-chunk-48-1.svg" width="75%" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+# Customizing your ggplot
+
+.pull-left[
+
+Global and local mappings can be combined together:
+
+
+```r
+ggplot(data = mtpl_tidy[1:1000, ],
+       mapping = aes(x = POWER, y = AGEPH)) +
+  geom_point(aes(color = SEX)) + 
+  geom_smooth(color = 'purple') +
+  labs(x = 'vehicle power',
+       y = 'policyholder age') +
+  ggtitle('Colorful scatterplot') +
+  theme_bw()
+```
+
+- `labs` defines axis labels
+- `ggtitle` defines a title
+- `theme_bw` removes gray background
+
+]
+
+.pull-right[
+
+This is the result:
+
+&lt;img src="R_introduction_files/figure-html/unnamed-chunk-50-1.svg" width="85%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+name: yourturn
+class: clear
+
+.left-column[
+
+&lt;!-- Add icon library --&gt;
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"&gt;
+
+## &lt;i class="fa fa-edit"&gt;&lt;/i&gt; &lt;br&gt; Your turn
+
+
+]
+
+.right-column[
+
+Play around with different `geom_` elements to discover the MTPL data. 
+
+Some options are listed below:
+
+1. Draw a histogram for the bonus-malus level `BM` with `geom_histogram`. Try to overlay the histogram with a density via `geom_density`.
+
+2. Create a barplot of `FUEL` with `geom_bar`. Try to split the distribution by `SEX` via the **fill** aesthetic.
+
+3. Draw a boxplot of the vehicle age `AGEC`, split by the `USE` of the vehicle.
+
+4. Create a 2D hexogram plot for `AGEPH` and `POWER` via `geom_hex`. Install {hexbin} first.
+
+]
+
+---
+
+class: clear
+
+
+.pull-left[
+
+My solution for .hi-pink[Q1]:
+
+
+```r
+ggplot(mtpl_tidy, aes(x = BM)) +
+  geom_histogram(binwidth = 1) +
+  geom_density(aes(y = ..count..), color = "blue")
+```
+
+&lt;img src="R_introduction_files/figure-html/unnamed-chunk-51-1.svg" width="85%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+
+My solution for .hi-pink[Q2]:
+
+
+```r
+ggplot(mtpl_tidy, aes(x = FUEL, fill = SEX)) +
+  geom_bar(aes(y = ..count../sum(..count..)),
+           position = 'dodge') 
+```
+
+&lt;img src="R_introduction_files/figure-html/unnamed-chunk-52-1.svg" width="85%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+
+class: clear
+
+
+.pull-left[
+
+My solution for .hi-pink[Q3]:
+
+
+```r
+ggplot(mtpl_tidy, aes(x = USE, y = AGEC)) +
+  geom_boxplot() 
+```
+
+&lt;img src="R_introduction_files/figure-html/unnamed-chunk-53-1.svg" width="85%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+
+My solution for .hi-pink[Q4]:
+
+
+```r
+library(hexbin)
+ggplot(mtpl_tidy, aes(x = AGEPH, y = POWER)) +
+  geom_hex() 
+```
+
+&lt;img src="R_introduction_files/figure-html/unnamed-chunk-54-1.svg" width="85%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+class: inverse, center, middle
+name: cond
+
+# Conditionals and control flow
+
+---
+
+# Relational operators
+
+You’ll first learn about relational operators to see how R objects .KUlbginline[compare].
+
+
+```r
+3 == (2 + 1)
+## [1] TRUE
+"intermediate" == "r"
+## [1] FALSE
+(1 + 2) &gt; 4
+## [1] FALSE
+katrien &lt;- c(19, 22, 4, 5, 7)
+katrien &gt; 5
+## [1]  TRUE  TRUE FALSE FALSE  TRUE
+```
+
+--
+
+Make sure not to mix up `==` and `=`, where the latter is used for assignment and the former checks equality.
+
+---
+
+# Logical operators
+
+.pull-left[
+Logical operators are used to .KUlbginline[combine] logicals.
+
+The AND operator `&amp;` needs all `TRUE` values to be `TRUE`:
+
+
+```r
+TRUE &amp; TRUE
+## [1] TRUE
+5 &lt;= 5 &amp; 2 &gt; 3
+## [1] FALSE
+```
+
+The OR operator `|` needs one `TRUE` value to be `TRUE`:
+
+
+```r
+FALSE | TRUE
+## [1] TRUE
+3 &lt; 3 | 7 &lt; 6
+## [1] FALSE
+```
+]
+
+--
+
+.pull-right[
+
+The NOT operator `!` reverses the result of a logical value:
+
+
+```r
+! TRUE
+## [1] FALSE
+! 5 &gt; 10
+## [1] TRUE
+```
+
+These operators can be applied to vectors:
+
+
+```r
+katrien &lt;- c(19, 22, 4, 5, 7)
+jan &lt;- c(34, 55, 76, 25, 4)
+katrien &gt; 5 &amp; jan &lt;= 30
+## [1] FALSE FALSE FALSE FALSE  TRUE
+```
+]
+
+---
+
+# Conditionals 
+
+.pull-left[
+Time to check the `if` statement in R:
+
+
+```r
+num_attendees &lt;- 30
+
+if (num_attendees &gt; 5) {
+  print("You're popular!")
+}
+[1] "You're popular!"
+```
+
+and the `if else`:
+
+
+```r
+num_attendees &lt;- 5
+
+if (num_attendees &gt; 5) {
+  print("You're popular!")
+} else {
+  print("You are not so popular!")
+}
+[1] "You are not so popular!"
+```
+]
+
+--
+
+.pull-right[
+
+We can use `elseif()` arbitrarily many times following an `if()` statement:
+
+
+```r
+x &lt;- -2
+
+if (x^2 &lt; 1) {
+  x^2 
+} else if (x &gt;= 1) {
+  2*x-1
+} else {
+ -2*x-1
+}
+## [1] 3
+```
+
+For quick decision making use `ifelse()`
+
+
+```r
+ifelse(x &gt; 0, x, -x)
+## [1] 2
+```
+]
+
+---
+
+# Conditionals (cont.)
+
+Instead of an `if()` statement followed by `elseif()` statements (and perhaps a final else), we can use `switch()`. 
+
+We pass a variable to select on, then a value for each option:
+
+
+```r
+type_of_summary &lt;- "mode"
+
+switch(type_of_summary,
+       mean = mean(x_vector),
+       median = median(x_vector),
+       histogram = hist(x_vector),
+       "I don't understand")
+## [1] "I don't understand"
+```
+
+---
+
+# Loops in R
+
+.pull-left[
+
+A `for` loop runs for a fixed number of times:
+
+
+```r
+primes &lt;- c(2, 3, 5, 7)
+
+# loop version 1
+for (p in primes) {
+  print(p)
+}
+[1] 2
+[1] 3
+[1] 5
+[1] 7
+
+# loop version 2
+for (i in 1:length(primes)) {
+  print(primes[i])
+}
+[1] 2
+[1] 3
+[1] 5
+[1] 7
+```
+]
+
+--
+
+.pull-right[
+A `while` loop runs until a condition is not met anymore:
+
+
+```r
+todo &lt;- 64
+
+while (todo &gt; 30) {
+  print("Work harder")
+  todo &lt;- todo - 7
+  print(todo)
+}
+[1] "Work harder"
+[1] 57
+[1] "Work harder"
+[1] 50
+[1] "Work harder"
+[1] 43
+[1] "Work harder"
+[1] 36
+[1] "Work harder"
+[1] 29
+```
+]
+
+
+---
+
+name: yourturn
+class: clear
+
+.left-column[
+
+&lt;!-- Add icon library --&gt;
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"&gt;
+
+## &lt;i class="fa fa-edit"&gt;&lt;/i&gt; &lt;br&gt; Your turn
+
+
+]
+
+.right-column[
+
+1. Create a piece of code that prints the numbers from 2 up to 7, along with the message 'Divisible by 2 and 3', 'Divisible by 2 or 3' or 'Not divisible by 2 and 3'. Start from the structure below and fill in the gaps `...`.
+
+2. Adjust the code created in 1. to work with `ifelse` instead.
+
+
+```r
+for(num in ...) {
+  print(num)
+  ... (num %% 2 == 0 ... num %% 3 == 0) {
+    print('Divisible by 2 and 3')
+  } ... (num %% 2 == 0 ... num %% 3 == 0) {
+    print('Divisible by 2 or 3')
+  } ... {
+    print('Not divisible by 2 or 3')
+  }
+}
+```
+
+
+
+
+]
+
+---
+
+class: clear
+
+
+.pull-left[
+
+My solution for .hi-pink[Q1]:
+
+
+```r
+for(num in 2:7) {
+  print(num)
+  if (num %% 2 == 0 &amp; num %% 3 == 0) {
+    print('Divisible by 2 and 3')
+  } else if (num %% 2 == 0 | num %% 3 == 0) {
+    print('Divisible by 2 or 3')
+  } else {
+    print('Not divisible by 2 or 3')
+  }
+}
+## [1] 2
+## [1] "Divisible by 2 or 3"
+## [1] 3
+## [1] "Divisible by 2 or 3"
+## [1] 4
+## [1] "Divisible by 2 or 3"
+## [1] 5
+## [1] "Not divisible by 2 or 3"
+## [1] 6
+## [1] "Divisible by 2 and 3"
+## [1] 7
+## [1] "Not divisible by 2 or 3"
+```
+]
+
+.pull-right[
+
+My solution for .hi-pink[Q2]:
+
+
+```r
+for(num in 2:7) {
+  print(num)
+  print(ifelse(num %% 2 == 0 &amp; num %% 3 == 0,
+               'Divisible by 2 and 3',
+                ifelse(num %% 2 == 0 | num %% 3 == 0,
+                       'Divisible by 2 or 3',
+                       'Not divisible by 2 or 3')))
+}
+## [1] 2
+## [1] "Divisible by 2 or 3"
+## [1] 3
+## [1] "Divisible by 2 or 3"
+## [1] 4
+## [1] "Divisible by 2 or 3"
+## [1] 5
+## [1] "Not divisible by 2 or 3"
+## [1] 6
+## [1] "Divisible by 2 and 3"
+## [1] 7
+## [1] "Not divisible by 2 or 3"
+```
+
+]
+
+---
+
+class: inverse, center, middle
+name: func
+
+# Writing functions
+
+---
+
+# Write your own function
+
+.pull-left[
+Creating a function in R is basically the assignment of a function object to a variable:
+
+
+```r
+My_sqrt &lt;- function(x) {
+  sqrt(x)
+}
+
+# use the function
+My_sqrt(12)
+[1] 3.464102
+```
+
+With no explicit `return()` statement, the default is just to return whatever is on the last line. 
+]
+
+--
+
+.pull-right[
+
+You can define default argument values in your functions:
+
+
+```r
+My_sqrt &lt;- function(x, print_info = TRUE) {
+  y &lt;- sqrt(x)
+  if (print_info) {
+    print(paste("sqrt", x, "equals", y))
+  }
+  return(y)
+}
+
+# some calls of the function
+My_sqrt(16)
+[1] "sqrt 16 equals 4"
+[1] 4
+My_sqrt(16, FALSE)
+[1] 4
+My_sqrt(16, TRUE)
+[1] "sqrt 16 equals 4"
+[1] 4
+```
+]
+
+---
+
+
+# Vectorized thinking
+
+R works in a vectorized way. 
+
+Check this by calling the function `My_sqrt` on an input vector:
+
+
+```r
+My_sqrt(c(16, 36, 64))
+## [1] "sqrt 16 equals 4" "sqrt 36 equals 6" "sqrt 64 equals 8"
+## [1] 4 6 8
+My_sqrt(c(16, 36, 64), FALSE)
+## [1] 4 6 8
+```
+
+---
+
+# What the function can see and do
+
+Some things to keep in mind:
+
+- each function has its own environment
+
+- names here override names in the global environment
+
+- internal environment starts with the named arguments
+
+- assignments inside the function only change the internal environment
+
+- names undefined in the function are looked for in the global environment.
+
+---
+
+name: yourturn
+class: clear
+
+.left-column[
+
+&lt;!-- Add icon library --&gt;
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"&gt;
+
+## &lt;i class="fa fa-edit"&gt;&lt;/i&gt; &lt;br&gt; Your turn
+
+
+]
+
+.right-column[
+
+1. Create a function that will return the sum of 2 integers
+
+2. Create a function that given a vector and an integer will return how many times the integer appears inside the vector.
+
+3. Create a function that given a vector will print by default the mean and the standard deviation, it will optionally also print the median. Start from the structure below and fill in the gaps `...`.
+
+4. Adjust the function created in 3. so that it returns a list with the mean, median and standard deviation.
+
+
+```r
+My_mean_SD &lt;- function(x, med = FALSE) {
+  mean_x &lt;- ...
+  stdv_x &lt;- ...
+  cat("Mean is:", ... , ", SD is:", ... , "\n")
+  
+  if(...){
+    median_x &lt;- ...
+    cat("Median is:", ... , "\n")
+  }
+}
+```
+
+]
+
+---
+
+class: clear
+
+
+.pull-left[
+
+My solution for .hi-pink[Q1]:
+
+
+```r
+My_sum &lt;- function (x, y) {
+  return(x + y)
+}
+
+My_sum(5, 10)
+## [1] 15
+
+My_sum(-1, -7)
+## [1] -8
+
+My_sum(1:3, 5:7)
+## [1]  6  8 10
+```
+]
+
+.pull-right[
+
+My solution for .hi-pink[Q2]:
+
+
+```r
+My_count &lt;- function (v, x) {
+  count &lt;- 0
+  for (i in 1:length(v)) {
+    if (v[i] == x) {
+      count &lt;- count + 1
+    }
+  }
+  return(count)
+}
+
+My_count(c(1,2,3,3,3,4,5,6,3,3), 3)
+[1] 5
+
+My_count(c(1:9, rep(10, 100), 11:35), 10)
+[1] 100
+```
+
+]
+
+---
+
+class: clear
+
+.pull-left[
+
+My solution for .hi-pink[Q3]:
+
+
+```r
+My_mean_SD &lt;- function(x, med = FALSE) {
+  mean_x &lt;- round(mean(x), 1)
+  stdv_x &lt;- round(sd(x), 1)
+  cat("Mean is:", mean_x, ", SD is:", stdv_x, "\n")
+  
+  if(med){
+    median_x &lt;- median(x)
+    cat("Median is:", median_x , "\n")
+  }
+}
+
+My_mean_SD(rep(5, 3), med = FALSE)
+Mean is: 5 , SD is: 0 
+
+My_mean_SD(1:10, med = TRUE)
+Mean is: 5.5 , SD is: 3 
+Median is: 5.5 
+```
+]
+
+.pull-right[
+
+My solution for .hi-pink[Q4]:
+
+
+```r
+My_mean_SD &lt;- function(x, med = FALSE) {
+  if(!med) return(list(mean = round(mean(x), 1),
+                       stdev = round(sd(x), 1)))
+  return(list(mean = round(mean(x), 1),
+              stdev = round(sd(x), 1),
+              median = median(x)))
+}
+
+My_mean_SD(rep(5, 3), med = FALSE)
+$mean
+[1] 5
+
+$stdev
+[1] 0
+
+My_mean_SD(1:10, med = TRUE)
+$mean
+[1] 5.5
+
+$stdev
+[1] 3
+
+$median
+[1] 5.5
+```
+]
+
+---
+
+name: wrap-up
+
+# Thanks!  &lt;img src="img/xaringan.png" class="title-hex"&gt;
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+Slides created with the R package [xaringan](https://github.com/yihui/xaringan).
+&lt;br&gt; &lt;br&gt; &lt;br&gt;
+Course material available via 
+&lt;br&gt;
+&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#116E8A;" viewBox="0 0 496 512"&gt;&lt;path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/&gt;&lt;/svg&gt; https://github.com/katrienantonio/werkt-U-al-met-R
+
+
+
+
+
+---
+
+class: inverse, center, middle
+
+# Appendix: extra sheets
+
+
+---
+
+name: why-R
+
+# Why R and RStudio? 
+
+.center[
+&lt;img src="R_introduction_files/figure-html/indeeddotcom-1.svg" style="display: block; margin: auto;" /&gt;
+]
+
+&lt;br&gt;
+
+.footnote[This graph is created from the search results obtained via [www.indeed.com](https://www.indeed.com) (on Jan 12, 2020), using Grant McDermott's code for `ggplot2`, see lecture 1 in his [Data science for economists course](http://github.com/uo-ec607/lectures).]
+
+---
+
+# Why R and RStudio? (cont.)
+
+### Data science positivism
+
+- Next to Python, R has become the *de facto* language for data science, with a cutting edge *machine learning toolbox*.
+- See: [The Popularity of Data Science Software](http://r4stats.com/articles/popularity/)
+- R is open-source with a very active community of users spanning academia and industry.
+
+--
+
+### Bridge to actuarial science, econometrics and other tools
+
+- R has all of the statistics and econometrics support, and is amazingly adaptable as a “glue” language to other programming languages and APIs.
+- R does not try to be everything to everyone. The RStudio IDE and ecosystem allow for further, seemless integration (with e.g. python, keras, tensorflow or C).
+- Widely used in actuarial undergraduate programs 
+
+--
+
+### Disclaimer + Read more
+
+- It's also the language that we know best.
+- If you want to read more: [R-vs-Python](https://blog.rstudio.com/2019/12/17/r-vs-python-what-s-the-best-for-language-for-data-science/), [when to use Python or R](https://www.datacamp.com/community/blog/when-to-use-python-or-r) or [Hadley Wickham on the future of R](https://qz.com/1661487/hadley-wickham-on-the-future-of-r-python-and-the-tidyverse/)
+
+---
+
+# Join operations in dplyr
+
+A **join** operation in database terminology is a merging of two data frames.
+
+There are 4 types of joins:
+
+- **Inner join** (or join): retain just the rows each table that match the condition
+
+- **Left outer join** (or left join): retain all rows in the first table, and just the rows in the second table that match the condition
+
+- **Right outer join** (or right join): retain just the rows in the first table that match the condition, and all rows in the second table
+
+- **Full outer join** (or full join): retain all rows in both tables
+
+Column values that cannot be filled in are assigned NA values
+
+---
+
+# Join operations in dplyr (cont.)
+
+We create a toy data set with policyholders&lt;sup&gt;1&lt;/sup&gt;:
+
+.footnote[
+[1] Courtesy of Ryan Tibshirani's course on Statistical computing.
+]
+
+
+```r
+tab_1 &lt;- data.frame(name = c("Alexis", "Bernie", "Charlie"),
+                    children = 1:3,
+                    stringsAsFactors = FALSE)
+tab_2 &lt;- data.frame(name = c("Alexis", "Bernie", "David"),
+                    age = c(54, 34, 63),
+                    stringsAsFactors = FALSE)
+tab_1
+##      name children
+## 1  Alexis        1
+## 2  Bernie        2
+## 3 Charlie        3
+tab_2
+##     name age
+## 1 Alexis  54
+## 2 Bernie  34
+## 3  David  63
+```
+
+
+---
+
+# inner_join()
+
+We join `tab1` and `tab2` by name, but keep only customers in intersection:
+
+
+```r
+tab_1
+##      name children
+## 1  Alexis        1
+## 2  Bernie        2
+## 3 Charlie        3
+tab_2
+##     name age
+## 1 Alexis  54
+## 2 Bernie  34
+## 3  David  63
+
+inner_join(x = tab_1, y = tab_2, by = "name")
+##     name children age
+## 1 Alexis        1  54
+## 2 Bernie        2  34
+```
+
+---
+
+# left_join()
+
+We join `tab_1` and `tab_2` by name, but keep all customers from `tab_1`:
+
+
+```r
+tab_1
+##      name children
+## 1  Alexis        1
+## 2  Bernie        2
+## 3 Charlie        3
+tab_2
+##     name age
+## 1 Alexis  54
+## 2 Bernie  34
+## 3  David  63
+
+left_join(x = tab_1, y = tab_2, by = "name")
+##      name children age
+## 1  Alexis        1  54
+## 2  Bernie        2  34
+## 3 Charlie        3  NA
+```
+
+---
+
+# right_join()
+
+We join `tab_1` and `tab_2` by name, but keep all customers from `tab_2`:
+
+
+```r
+tab_1
+##      name children
+## 1  Alexis        1
+## 2  Bernie        2
+## 3 Charlie        3
+tab_2
+##     name age
+## 1 Alexis  54
+## 2 Bernie  34
+## 3  David  63
+
+right_join(x = tab_1, y = tab_2, by = "name")
+##     name children age
+## 1 Alexis        1  54
+## 2 Bernie        2  34
+## 3  David       NA  63
+```
+
+
+---
+
+# full_join()
+
+Finally, suppose we want to join `tab_1` and `tab_2` by name, and keep all customers from both:
+
+
+```r
+tab_1
+##      name children
+## 1  Alexis        1
+## 2  Bernie        2
+## 3 Charlie        3
+tab_2
+##     name age
+## 1 Alexis  54
+## 2 Bernie  34
+## 3  David  63
+
+full_join(x = tab_1, y = tab_2, by = "name")
+##      name children age
+## 1  Alexis        1  54
+## 2  Bernie        2  34
+## 3 Charlie        3  NA
+## 4   David       NA  63
+```
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightLanguage": "R",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"highlightSpans": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

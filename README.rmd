@@ -58,15 +58,17 @@ The course is designed for new R users, no prior knowledge is required.
 The detailed schedule is subject to small changes. Lecture material will
 be added in the days before the workshop.
 
-| Session | Duration      | Description                     | Lecture material                                                                    |
-| :-----: | ------------- | ------------------------------- | ----------------------------------------------------------------------------------- |
-|  Day 0  | your own pace | Prework                         | create your account on RStudio Cloud OR install R and RStudio on your local machine |
-|  Day 1  | 09.30 - 09.45 | Prologue                        |                                                                                     |
-|         | 09.45 - 10.20 | R syntax, object and data types |                                                                                     |
-|         | 10.30 - 11.20 | Working with data in R          |                                                                                     |
-|         | 11.30 - 11.45 | More on data visualization in R |                                                                                     |
-|         | 11.45 - 12.05 | Conditionals and control flow   |                                                                                     |
-|         | 12.05 - 12.30 | Writing functions               |                                                                                     |
+A pdf of the lecture sheets can be downloaded [here](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/lecture_sheets_R_workshop.pdf). 
+
+| Session | Duration      | Description                     | Lecture material                                                                    |  Script |
+| :-----: | ------------- | ------------------------------- | ----------------------------------------------------------------------------------- |---------|
+|  Day 0  | your own pace | Prework                         | create your account on RStudio Cloud OR install R and RStudio on your local machine | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/installation-instructions.R) |
+|  Day 1  | 09.30 - 09.45 | Prologue                        | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#prologue) or [pdf](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/lecture_sheets_R_workshop.pdf) | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/0_prologue.R) |                                                               |
+|         | 09.45 - 10.20 | R syntax, object and data types | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#object)                                                                                    | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/1_syntax_data_object_types.R) |
+|         | 10.30 - 11.20 | Working with data in R          | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#data)                                                                                    |  script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/2_working_with_data.R) |
+|         | 11.30 - 11.45 | More on data visualization in R | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#dataviz)                                                                                    |  script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/3_more_data_viz.R) |
+|         | 11.45 - 12.05 | Conditionals and control flow   | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#cond)                                                                           |  script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/4_conditionals_control_flow.R) |
+|         | 12.05 - 12.30 | Writing functions               | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#func)                                                                                    | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/5_functions.R) |
 
 ## Software Requirements
 
