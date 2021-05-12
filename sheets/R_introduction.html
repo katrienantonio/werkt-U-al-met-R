@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Werkt U al met R?</title>
+    <title>Learn R by doing, oriented to actuaries</title>
     <meta charset="utf-8" />
     <meta name="author" content="Katrien Antonio &amp; Roel Henckaerts" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
@@ -13,7 +13,7 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Werkt U al met R?
+# Learn R by doing, oriented to actuaries
 ## Hands-on webinar
 <html>
 <div style="float:left">
@@ -22,7 +22,7 @@ class: center, middle, inverse, title-slide
 <hr align='center' color='#116E8A' size=1px width=97%>
 </html>
 ### Katrien Antonio &amp; Roel Henckaerts
-### <a href="https://github.com/katrienantonio/werkt-U-al-met-R">Introductie tot R workshop</a> | December 1, 2020
+### <a href="https://github.com/katrienantonio/werkt-U-al-met-R">Introduction to R workshop</a> | May 17, 2021
 
 ---
 
@@ -1458,7 +1458,7 @@ str(mtcars, list.len = 5)
 ##   [list output truncated]
 
 str(as_tibble(mtcars), list.len = 5)
-## tibble [32 × 11] (S3: tbl_df/tbl/data.frame)
+## tibble [32 x 11] (S3: tbl_df/tbl/data.frame)
 ##  $ mpg : num [1:32] 21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
 ##  $ cyl : num [1:32] 6 6 4 6 8 6 8 4 4 6 ...
 ##  $ disp: num [1:32] 160 160 108 258 360 ...
@@ -1574,14 +1574,22 @@ Here you go:
 
 ```r
 mtcars %&gt;% filter(hp &gt; 200) %&gt;% mutate(hp_per_wt = hp / wt)
-##    mpg cyl disp  hp drat    wt  qsec vs am gear carb hp_per_wt
-## 1 14.3   8  360 245 3.21 3.570 15.84  0  0    3    4  68.62745
-## 2 10.4   8  472 205 2.93 5.250 17.98  0  0    3    4  39.04762
-## 3 10.4   8  460 215 3.00 5.424 17.82  0  0    3    4  39.63864
-## 4 14.7   8  440 230 3.23 5.345 17.42  0  0    3    4  43.03087
-## 5 13.3   8  350 245 3.73 3.840 15.41  0  0    3    4  63.80208
-## 6 15.8   8  351 264 4.22 3.170 14.50  0  1    5    4  83.28076
-## 7 15.0   8  301 335 3.54 3.570 14.60  0  1    5    8  93.83754
+##                      mpg cyl disp  hp drat    wt  qsec vs am gear carb
+## Duster 360          14.3   8  360 245 3.21 3.570 15.84  0  0    3    4
+## Cadillac Fleetwood  10.4   8  472 205 2.93 5.250 17.98  0  0    3    4
+## Lincoln Continental 10.4   8  460 215 3.00 5.424 17.82  0  0    3    4
+## Chrysler Imperial   14.7   8  440 230 3.23 5.345 17.42  0  0    3    4
+## Camaro Z28          13.3   8  350 245 3.73 3.840 15.41  0  0    3    4
+## Ford Pantera L      15.8   8  351 264 4.22 3.170 14.50  0  1    5    4
+## Maserati Bora       15.0   8  301 335 3.54 3.570 14.60  0  1    5    8
+##                     hp_per_wt
+## Duster 360           68.62745
+## Cadillac Fleetwood   39.04762
+## Lincoln Continental  39.63864
+## Chrysler Imperial    43.03087
+## Camaro Z28           63.80208
+## Ford Pantera L       83.28076
+## Maserati Bora        93.83754
 ```
 
 ---

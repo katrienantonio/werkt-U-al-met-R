@@ -3,13 +3,13 @@
 
 A 3h introductory workshop: learning R by doing, oriented to actuaries\!
 
-Course materials for the online edition of the course in December 2020.
+Course materials for the online edition of the course in May 2021.
 
 The R programming language is an invaluable tool for data science. This
 course equips you with the fundamental tools for data analysis in R and
 RStudio.
 
-📆 December 1, 2020 <br> 🕐 From 9.30 am to 12.30 pm <br> 📌 online
+📆 May 17, 2021 <br> 🕕 From 1.30pm to 4.30pm <br> 📌 online, using Zoom
 
 Course materials will be posted in the days before the workshop.
 
@@ -41,12 +41,12 @@ A pdf of the lecture sheets can be downloaded
 | Session | Duration      | Description                     | Lecture material                                                                                                                                                                                         | Script                                                                                                 |
 | :-----: | ------------- | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
 |  Day 0  | your own pace | Prework                         | create your account on RStudio Cloud OR install R and RStudio on your local machine                                                                                                                      | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/installation-instructions.R)   |
-|  Day 1  | 09.30 - 09.45 | Prologue                        | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#prologue) or [pdf](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/lecture_sheets_R_workshop.pdf) | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/0_prologue.R)                  |
-|         | 09.45 - 10.20 | R syntax, object and data types | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#object)                                                                                                    | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/1_syntax_data_object_types.R)  |
-|         | 10.30 - 11.20 | Working with data in R          | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#data)                                                                                                      | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/2_working_with_data.R)         |
-|         | 11.30 - 11.45 | More on data visualization in R | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#dataviz)                                                                                                   | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/3_more_data_viz.R)             |
-|         | 11.45 - 12.05 | Conditionals and control flow   | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#cond)                                                                                                      | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/4_conditionals_control_flow.R) |
-|         | 12.05 - 12.30 | Writing functions               | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#func)                                                                                                      | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/5_functions.R)                 |
+|  Day 1  | 01.30 - 01.45 | Prologue                        | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#prologue) or [pdf](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/lecture_sheets_R_workshop.pdf) | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/0_prologue.R)                  |
+|         | 01.45 - 02.20 | R syntax, object and data types | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#object)                                                                                                    | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/1_syntax_data_object_types.R)  |
+|         | 02.30 - 03.20 | Working with data in R          | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#data)                                                                                                      | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/2_working_with_data.R)         |
+|         | 03.30 - 03.45 | More on data visualization in R | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#dataviz)                                                                                                   | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/3_more_data_viz.R)             |
+|         | 03.45 - 04.05 | Conditionals and control flow   | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#cond)                                                                                                      | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/4_conditionals_control_flow.R) |
+|         | 04.05 - 04.30 | Writing functions               | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#func)                                                                                                      | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/5_functions.R)                 |
 
 ## Software Requirements
 
@@ -55,25 +55,40 @@ workshop. Either you join the RStudio cloud workspace dedicated to the
 workshop, and then you’ll run R in the cloud, from your browser. Or you
 use your local installation of R and RStudio.
 
-### R Studio Cloud
+We kindly ask participants to **join the RStudio Cloud as default**\!
 
-If you prefer not to work with a local installation of R (and the
-necessary packages), you can join our workspace on R Studio Cloud. This
-should be a **very accessible set-up** for working with R in the cloud
-for the less experienced user\!
+### RStudio Cloud - default\!
 
-<https://rstudio.cloud/spaces/107529/join?access_code=ztRjphtLMXqvVJXDAGXURHD3iRZ%2FlTGW4KWPoYMj>
+You will join our workspace on R Studio Cloud. This enables a **very
+accessible set-up** for working with R in the cloud for the less
+experienced user\!
 
-After creating an account for RStudio you will be able to work with the
-scripts and data sets in the cloud. We will have everything set up for
-you in the correct way. You only have to login\!
+<https://rstudio.cloud/spaces/143507/join?access_code=j%2FGjLwr6Pwix9FucSdDT3Q3XIbZARdRt8aii7ttZ>
 
-### Local installation
+Here are the steps you should take (before the workshop):
 
-Please bring a laptop with a recent version of R and RStudio installed.
-Make sure you can connect your laptop to the internet (or download the
-course material one day before the start of the workshop). You will
-need:
+  - visit the above link
+  - log in by creating an account for RStudio or by using your Google or
+    GitHub login credentials
+  - join the space
+  - at the top of your screen you see ‘Projects’, click ‘Projects’
+  - with the ‘copy’ button (on the right) you can make your own version
+    of the ‘learn R by doing’ project; in this copy you can work on the
+    exercises, add comments etc.
+  - you should now be able to visit the ‘learn R by doing’ project and
+    see the ‘scripts’ and ‘data’ folders on the right. Open and run the
+    ‘installation-instructions.R’ script from the scripts folder, to
+    see if everything works fine.
+
+We will have everything set up for you in the correct way. You only have
+to login\!
+
+### Local installation - optional (make sure you have access to the RStudio Cloud as sketched above)\!
+
+Alternatively, you can bring a laptop with a recent version of R and
+RStudio installed. Make sure you can connect your laptop to the internet
+(or download the course material one day before the start of the
+workshop). You will need:
 
   - R (at least 3.5.2 <https://cloud.r-project.org/bin/windows/base/>)
   - RStudio
