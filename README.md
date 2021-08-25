@@ -1,15 +1,17 @@
 
 ## werkt-U-al-met-R
 
-A 3h introductory workshop: learning R by doing, oriented to actuaries\!
+A 3h introductory workshop: learning R by doing, oriented to actuaries
+and risk managers\!
 
-Course materials for the online edition of the course in May 2021.
+Course materials for the online edition of the course in September 2021.
 
 The R programming language is an invaluable tool for data science. This
 course equips you with the fundamental tools for data analysis in R and
 RStudio.
 
-📆 May 17, 2021 <br> 🕕 From 1.30pm to 4.30pm <br> 📌 online, using Zoom
+📆 September 6, 2021 <br> 🕜 From 9.00am to 12.00pm <br> 📌 online,
+organized by Capgemini Academy and Nationale Nederlanden
 
 Course materials will be posted in the days before the workshop.
 
@@ -41,12 +43,12 @@ A pdf of the lecture sheets can be downloaded
 | Session | Duration      | Description                     | Lecture material                                                                                                                                                                                         | Script                                                                                                 |
 | :-----: | ------------- | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
 |  Day 0  | your own pace | Prework                         | create your account on RStudio Cloud OR install R and RStudio on your local machine                                                                                                                      | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/installation-instructions.R)   |
-|  Day 1  | 01.30 - 01.45 | Prologue                        | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#prologue) or [pdf](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/lecture_sheets_R_workshop.pdf) | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/0_prologue.R)                  |
-|         | 01.45 - 02.20 | R syntax, object and data types | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#object)                                                                                                    | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/1_syntax_data_object_types.R)  |
-|         | 02.30 - 03.20 | Working with data in R          | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#data)                                                                                                      | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/2_working_with_data.R)         |
-|         | 03.30 - 03.45 | More on data visualization in R | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#dataviz)                                                                                                   | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/3_more_data_viz.R)             |
-|         | 03.45 - 04.05 | Conditionals and control flow   | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#cond)                                                                                                      | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/4_conditionals_control_flow.R) |
-|         | 04.05 - 04.30 | Writing functions               | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#func)                                                                                                      | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/5_functions.R)                 |
+|  Day 1  | 09.00 - 09.15 | Prologue                        | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#prologue) or [pdf](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/lecture_sheets_R_workshop.pdf) | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/0_prologue.R)                  |
+|         | 09.15 - 09.50 | R syntax, object and data types | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#object)                                                                                                    | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/1_syntax_data_object_types.R)  |
+|         | 10.00 - 10.50 | Working with data in R          | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#data)                                                                                                      | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/2_working_with_data.R)         |
+|         | 11.00 - 11.15 | More on data visualization in R | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#dataviz)                                                                                                   | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/3_more_data_viz.R)             |
+|         | 11.15 - 11.35 | Conditionals and control flow   | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#cond)                                                                                                      | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/4_conditionals_control_flow.R) |
+|         | 11.35 - 12.00 | Writing functions               | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#func)                                                                                                      | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/5_functions.R)                 |
 
 ## Software Requirements
 
@@ -68,8 +70,8 @@ experienced user\!
 Here are the steps you should take (before the workshop):
 
   - visit the above link
-  - log in by creating an account for RStudio or by using your Google or
-    GitHub login credentials
+  - log in by creating an account for RStudio Cloud or by using your
+    Google or GitHub login credentials
   - join the space
   - at the top of your screen you see ‘Projects’, click ‘Projects’
   - with the ‘copy’ button (on the right) you can make your own version
@@ -130,6 +132,19 @@ University of Amsterdam. She teaches courses on data science for
 insurance, life and non-life insurance mathematics and loss models.
 Research-wise Katrien puts focus on pricing, reserving and fraud
 analytics, as well as mortality dynamics.
+
+</p>
+
+<p align="justify">
+
+*Jonas Crevecoeur* is a post-doctoral researcher in biostatistics at KU
+Leuven. He recently obtained his PhD within the insurance research group
+at KU Leuven and holds the degrees of MSc in Mathematics, MSc in
+Insurance Studies and MSc in Financial and Actuarial Engineering (KU
+Leuven). Before starting the PhD program he worked as an intern with QBE
+Re (Belgium office) where he studied multiline products and copulas.
+Jonas was a PhD fellow of the Research Foundation - Flanders (FWO, PhD
+fellowship fundamental research).
 
 </p>
 
