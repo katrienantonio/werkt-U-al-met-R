@@ -10,8 +10,8 @@ The R programming language is an invaluable tool for data science. This
 course equips you with the fundamental tools for data analysis in R and
 RStudio.
 
-📆 September 6, 2021 <br> 🕓 From 9.00am to 12.00pm <br> 📍 online,
-organized by Capgemini Academy and Nationale Nederlanden
+📆 November 25, 2021 <br> 🕗 From 1.30pm to 4.30pm <br> 📍 online,
+organized by AG-AI
 
 Course materials will be posted in the days before the workshop.
 
@@ -43,12 +43,12 @@ A pdf of the lecture sheets can be downloaded
 | Session | Duration      | Description                     | Lecture material                                                                                                                                                                                         | Script                                                                                                 |
 | :-----: | ------------- | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
 |  Day 0  | your own pace | Prework                         | create your account on RStudio Cloud OR install R and RStudio on your local machine                                                                                                                      | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/installation-instructions.R)   |
-|  Day 1  | 09.00 - 09.15 | Prologue                        | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#prologue) or [pdf](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/lecture_sheets_R_workshop.pdf) | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/0_prologue.R)                  |
-|         | 09.15 - 09.50 | R syntax, object and data types | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#object)                                                                                                    | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/1_syntax_data_object_types.R)  |
-|         | 10.00 - 10.50 | Working with data in R          | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#data)                                                                                                      | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/2_working_with_data.R)         |
-|         | 11.00 - 11.15 | More on data visualization in R | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#dataviz)                                                                                                   | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/3_more_data_viz.R)             |
-|         | 11.15 - 11.35 | Conditionals and control flow   | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#cond)                                                                                                      | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/4_conditionals_control_flow.R) |
-|         | 11.35 - 12.00 | Writing functions               | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#func)                                                                                                      | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/5_functions.R)                 |
+|  Day 1  | 13.30 - 13.45 | Prologue                        | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#prologue) or [pdf](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/lecture_sheets_R_workshop.pdf) | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/0_prologue.R)                  |
+|         | 13.45 - 14.20 | R syntax, object and data types | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#object)                                                                                                    | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/1_syntax_data_object_types.R)  |
+|         | 14.30 - 15.20 | Working with data in R          | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#data)                                                                                                      | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/2_working_with_data.R)         |
+|         | 15.30 - 15.45 | More on data visualization in R | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#dataviz)                                                                                                   | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/3_more_data_viz.R)             |
+|         | 15.45 - 16.05 | Conditionals and control flow   | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#cond)                                                                                                      | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/4_conditionals_control_flow.R) |
+|         | 16.05 - 16.30 | Writing functions               | sheets in [html](https://katrienantonio.github.io/werkt-U-al-met-R/sheets/R_introduction.html#func)                                                                                                      | script in [R](https://katrienantonio.github.io/werkt-U-al-met-R/scripts/5_functions.R)                 |
 
 ## Software Requirements
 
@@ -150,13 +150,13 @@ fellowship fundamental research).
 
 <p align="justify">
 
-*Roel Henckaerts* is a PhD student in insurance data science at KU
-Leuven. Roel holds the degrees of MSc in Mathematical Engineering, MSc
-in Insurance Studies and Financial and Actuarial Engineering (KU
-Leuven). Before starting the PhD program he worked as an intern with AIG
-(London office) and KBC. Roel is PhD fellow of the Research Foundation -
-Flanders (FWO, PhD fellowship strategic basic research). After the
-completion of his PhD, Roel will join [Prophecy
+*Roel Henckaerts* PhD recently obtained his PhD at KU Leuven with a
+thesis on machine learning methods for insurance pricing. Roel holds the
+degrees of MSc in Mathematical Engineering, MSc in Insurance Studies and
+Financial and Actuarial Engineering (KU Leuven). Before starting the PhD
+program he worked as an intern with AIG (London office) and KBC. Roel is
+PhD fellow of the Research Foundation - Flanders (FWO, PhD fellowship
+strategic basic research). Roel is now with [Prophecy
 Labs](https://prophecylabs.com/): an AI/ML startup with experience in
 building end-to-end data solutions that provide concrete business value.
 
